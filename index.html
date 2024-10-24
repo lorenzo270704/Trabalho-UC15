@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Pokédex Completa</title>
-    <link rel="stylesheet" href="src/css/sytles.css">
+    <link rel="stylesheet" href="pokedex/css/sytles.css">
 </head>
 <body>
 
-    <div class="content">
-        <h1>Pokédex Completa</h1>
+    <div class="content"> 
+        <h1>Pokédex Completa</h1> 
 
-        <div class="header">
-            <div class="search-container">
-                <input type="text" id="searchInput" class="search-input" placeholder="Procure um Pokémon...">
-                <button class="search-button" onclick="pesquisarPokemon()">Buscar</button>
-                <select id="raritySelect" class="rarity-select" onchange="filtrarPorRaridade()">
-                    <option value="">Ver todas as raridades</option>
-                    <option value="comum">Comum</option>
-                    <option value="raro">Raro</option>
-                    <option value="lendário">Lendário</option>
+        <div class="header"> 
+            <div class="search-container"> 
+                <input type="text" id="searchInput" class="search-input" placeholder="Procure um Pokémon..." aria-label="Procurar Pokémon"> 
+                <button class="search-button" onclick="searchPokemon()">Buscar</button> 
+                <select id="raritySelect" class="rarity-select" onchange="filterByRarity()">
+                    <option value="">Ver todas as raridades</option> 
+                    <option value="comum">Comum</option> 
+                    <option value="raro">Raro</option> 
+                    <option value="lendário">Lendário</option> 
                 </select>
             </div>
         </div>
 
-        <div class="abas">
-            <div class="aba">Geração I</div>
-            <div class="aba" >Geração II</div>
-            <div class="aba" >Geração III</div>
-            <div class="aba" >Geração IV</div>
-            <div class="aba" >Geração V</div>
-            <div class="aba" >Geração VI</div>
-            <div class="aba" >Geração VII</div>
-            <div class="aba" >Geração VIII</div>
-            <div class="aba"  >Geração IX</div>
+        <div class="tabs"> 
+            <button class="tab" onclick="showGeneration(1)">Geração I</button>
+            <button class="tab" onclick="showGeneration(2)">Geração II</button>
+            <button class="tab" onclick="showGeneration(3)">Geração III</button>
+            <button class="tab" onclick="showGeneration(4)">Geração IV</button>
+            <button class="tab" onclick="showGeneration(5)">Geração V</button>
+            <button class="tab" onclick="showGeneration(6)">Geração VI</button>
+            <button class="tab" onclick="showGeneration(7)">Geração VII</button>
+            <button class="tab" onclick="showGeneration(8)">Geração VIII</button>
+            <button class="tab" onclick="showGeneration(9)">Geração IX</button>
         </div>
-
-    <script src="src/js/principal.js"></script>
-</body>
-</html>
