@@ -3,41 +3,53 @@
 <head>
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Pokédex Completa</title>
-    <link rel="stylesheet" href="pokedex/css/sytles.css">
-</head>
-<body>
+    <title>Pokédex Completa</title> 
+    <link rel="stylesheet" href="pokedex/css/sytles.css"> 
 
-    <div class="content"> 
-        <div class="CentralizarLogo">
-            <img src="Pokemon-Logo-PNG.png" alt="Logo Pokémon" class="logo" >
-        </div>
-        
+    <body>
+
+        <div class="content"> 
+            <div class="CentralizarLogo">
+                <img src="Pokemon-Logo-PNG.png" alt="Logo Pokémon" class="logo" >
+            </div>
 
         <div class="header"> 
-            <div class="search-container"> 
-                <input type="text" id="searchInput" class="search-input" placeholder="Procure um Pokémon..." aria-label="Procurar Pokémon" > 
-                <button class="search-button" onclick="searchPokemon()">Buscar</button> 
-                <select id="raritySelect" class="rarity-select" onchange="filterByRarity()">
-                    <option value="">Ver todas as raridades</option> 
+            <div class="pesquisar-container">
+                <input type="text" id="pesquisarInput" class="pesquisar-input" placeholder="Procure um Pokémon..." aria-label="Procurar Pokémon"> 
+                <button class="pesquisar-button" onclick="PesquisarPokemon()">Buscar</button>
+                <select id="raridade-Select" class="raridades-select" onchange="filtraRaridade()"> 
+                    <option value="">Ver todas as raridades</option>
                     <option value="comum">Comum</option> 
                     <option value="raro">Raro</option> 
-                    <option value="lendário">Lendário</option> 
+                    <option value="lendário">Lendário</option>
                 </select>
             </div>
         </div>
 
-        <div class="tabs"> 
-            <button class="tab" onclick="showGeneration(1)">Geração I</button>
-            <button class="tab" onclick="showGeneration(2)">Geração II</button>
-            <button class="tab" onclick="showGeneration(3)">Geração III</button>
-            <button class="tab" onclick="showGeneration(4)">Geração IV</button>
-            <button class="tab" onclick="showGeneration(5)">Geração V</button>
-            <button class="tab" onclick="showGeneration(6)">Geração VI</button>
-            <button class="tab" onclick="showGeneration(7)">Geração VII</button>
-            <button class="tab" onclick="showGeneration(8)">Geração VIII</button>
-            <button class="tab" onclick="showGeneration(9)">Geração IX</button>
+        <div class="abas"> 
+            <button class="aba" onclick="geracao(1)">Geração I</button> 
+            <button class="aba" onclick="geracao(2)">Geração II</button>
+            <button class="aba" onclick="geracao(3)">Geração III</button>
+            <button class="aba" onclick="geracao(4)">Geração IV</button>
+            <button class="aba" onclick="geracao(5)">Geração V</button>
+            <button class="aba" onclick="geracao(6)">Geração VI</button>
+            <button class="aba" onclick="geracao(7)">Geração VII</button>
+            <button class="aba" onclick="geracao(8)">Geração VIII</button>
+            <button class="aba" onclick="geracao(9)">Geração IX</button>
         </div>
+        
+        <div id="gen1" class="container"></div>
+        <div id="gen2" class="container"></div>
+        <div id="gen3" class="container"></div>
+        <div id="gen4" class="container"></div>
+        <div id="gen5" class="container"></div>
+        <div id="gen6" class="container"></div>
+        <div id="gen7" class="container"></div>
+        <div id="gen8" class="container"></div>
+        <div id="gen9" class="container"></div>
+    </div>
+
+    
 
        <a href=#topo><img src="seta-para-cima (1).png" alt="" id="SetaParaCima"></a>
             

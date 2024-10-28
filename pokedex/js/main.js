@@ -1,9 +1,9 @@
-function showGeneration(gen) {
+function geracao(gen) {
     document.querySelectorAll('.container').forEach(container => {
         container.style.display = 'none'; 
     });
 
-    fetchPokemon(gen); 
+    BuscarPokemon(gen); 
 }
 
-showGeneration(1);
+geracao(1);
