@@ -50,6 +50,30 @@
     </div>
 
     
+    <div id="pokemonModal" class="modal" role="dialog" aria-labelledby="modalNome" aria-hidden="true" > 
+        <div class="modal-content">
+            <button class="fechar" onclick="fechaModal()" aria-label="Fechar">&times;</button> 
+            <h2 id="modalNome"></h2>
+            <img id="modalImagem" src="" alt="Imagem do Pokémon"> 
+            <p id="modalTipo"></p> 
+            <p><strong>Altura:</strong> <span id="modalAltura"></span> m</p> 
+            <p><strong>Peso:</strong> <span id="modalPeso"></span> kg</p> 
+            <p><strong>Habilidades:</strong> <span id="modalHabilidade"></span></p> 
+            <p><strong>Estatísticas:</strong></p>
+            <ul id="modalEstatistica"></ul> 
+            <div>
+                <button id="anteButton" onclick="navegar(-1)">Anterior</button>
+                <button id="proxiButton" onclick="navegar(1)">Próximo</button> 
+            </div>
+        </div>
+    </div>
+
+    <script src="pokedex/js/pokemon-data.js"></script>
+    <script src="pokedex/js/fetch-pokemon.js"></script>
+    <script src="pokedex/js/modal.js"></script>
+    <script src="pokedex/js/search-filter.js"></script>
+    <script src="pokedex/js/main.js"></script>
+
 
        <a href=#topo><img src="seta-para-cima (1).png" alt="" id="SetaParaCima"></a>
             

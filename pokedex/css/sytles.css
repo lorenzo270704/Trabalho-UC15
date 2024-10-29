@@ -104,3 +104,123 @@ h1 {
 .SetaParaCimaa{
     width: 500px;
 }
+
+.container {
+    display: none; 
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.pokemon {
+    border: 2px solid #ffcc00;
+    border-radius: 10px; 
+    margin: 20px; 
+    padding: 15px;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); 
+    width: 220px; 
+    transition: transform 0.2s; 
+    cursor: pointer;
+}
+
+
+.type-water { background-color: #a4c8e1; } 
+.type-fire { background-color: #e24000; color:white; }
+.type-grass { background-color: #16b610; color:white; }
+.type-bug { background-color: #4c7729; color:white; }
+.type-ground { background-color: #ac7119; color:white; }
+.type-psychic { background-color: #ca2bc2; color:white; }
+.type-poison { background-color: #6f36cc; color:white; }
+.type-electric { background-color: #e2de00; }
+.type-flying { background-color: #ffad8a; }
+.type-rock { background-color: #8b6453; color: white;}
+.type-fighting { background-color: #daccc6; }
+.type-ghost { background-color: #805f94; color: white;}
+.type-dragon {background:#bb075e; color: white;}
+.legendary {
+    background: linear-gradient(135deg, 
+        #2c3e50, 
+        #4ca1af, 
+        #c3c3f3, 
+        #f5c3c3, 
+        #f7c3c3);
+    color: #3e225e;
+}
+
+
+
+.pokemon img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid #ffcc00;
+    background-color: #f9f9f9;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.726);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #c4bbbb;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px; 
+    width: 400px;
+    height: 550px; 
+    margin: auto;
+    text-align: center;
+    animation: none; 
+
+}
+@keyframes girar {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+
+
+.modal-content.girar {
+    animation: girar 0.5s; 
+}
+
+
+
+.fechar {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: #b15c24;
+    background-color: #e6b800;
+}
+
+.fechar:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .pokemon {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .abas {
+        flex-direction: column;
+    }
+    .search-container {
+        flex-direction: column;
+    }
+}
