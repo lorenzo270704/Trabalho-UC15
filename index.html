@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Pokédex Completa</title> 
     <link rel="stylesheet" href="pokedex/css/sytles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <body>
+    <body id="topo">
 
         <div class="content"> 
             <div class="CentralizarLogo">
@@ -54,16 +55,20 @@
         <div class="modal-content">
             <button class="fechar" onclick="fechaModal()" aria-label="Fechar">&times;</button> 
             <h2 id="modalNome"></h2>
-            <img id="modalImagem" src="" alt="Imagem do Pokémon"> 
+            <img id="modalImagem" src="" class="imagem-container" alt="Imagem do Pokémon"> 
+            <div class="EspacoEstatisticas">
             <p id="modalTipo"></p> 
+            
             <p><strong>Altura:</strong> <span id="modalAltura"></span> m</p> 
             <p><strong>Peso:</strong> <span id="modalPeso"></span> kg</p> 
             <p><strong>Habilidades:</strong> <span id="modalHabilidade"></span></p> 
             <p><strong>Estatísticas:</strong></p>
-            <ul id="modalEstatistica"></ul> 
+            
+            <ul id="modalEstatistica" class="EstatisticasCarta"></ul> 
             <div>
-                <button id="anteButton" onclick="navegar(-1)">Anterior</button>
-                <button id="proxiButton" onclick="navegar(1)">Próximo</button> 
+                <button id="anteButton" class="AntesButton" onclick="navegar(-1)">Anterior</button>
+                <button id="proxiButton" class="ProxButton" onclick="navegar(1)">Próximo</button> 
+                </div>
             </div>
         </div>
     </div>
@@ -75,6 +80,7 @@
     <script src="pokedex/js/main.js"></script>
 
 
-       <a href=#topo><img src="seta-para-cima (1).png" alt="" id="SetaParaCima"></a>
+    <a href="#topo" class="botao-voltar">↑ Voltar ao Topo</a>
+
             
         </body>
