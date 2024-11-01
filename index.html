@@ -10,11 +10,15 @@
     <body id="topo">
 
         <div class="content"> 
+            
             <div class="CentralizarLogo">
                 <img src="Pokemon-Logo-PNG.png" alt="Logo Pokémon" class="logo" >
+                
             </div>
-
-        <div class="header"> 
+            <div class="containerAnimacao"></div>
+            <img id="imagem" src="5FBP.gif" alt="Imagem Animada" style="position: absolute;">
+           
+        <div class="header">       
             <div class="pesquisar-container">
                 <input type="text" id="pesquisarInput" class="pesquisar-input" placeholder="Procure um Pokémon..." aria-label="Procurar Pokémon"> 
                 <button class="pesquisar-button" onclick="PesquisarPokemon()">Buscar</button>
@@ -49,7 +53,7 @@
         <div id="gen8" class="container"></div>
         <div id="gen9" class="container"></div>
     </div>
-
+    
     
     <div id="pokemonModal" class="modal" role="dialog" aria-labelledby="modalNome" aria-hidden="true" > 
         <div class="modal-content">
@@ -79,7 +83,7 @@
     <script src="pokedex/js/search-filter.js"></script>
     <script src="pokedex/js/main.js"></script>
     <script src="pokedex/js/ativa.js"></script>
-
+    <script src="pokedex/js/animacao.js"></script>
     
     <a href="#topo" id="botao-voltar"></a>
   
