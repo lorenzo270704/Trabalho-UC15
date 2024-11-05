@@ -64,8 +64,9 @@ h1 {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ffcc00;
-    margin-right: 10px;
+    margin-right: 1px;
     flex: 1; 
+    margin-left: 69px;
     min-width: 200px;
 }
 
@@ -74,6 +75,7 @@ h1 {
     background-color: #ffcc00;
     color: white;
     border: none;
+    margin-left: 15px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
@@ -112,21 +114,20 @@ h1 {
 }
 
 #botao-voltar {
-    height: 44px;
-    width: 35px;
+    height: 60px;
+    width: 60px;
     position: fixed;
     bottom: 50px;
     right: 20px;
-    background-image:  url('../../seta-para-cima\ \(1\).png');
     padding: 10px 15px;
     border-radius: 5px;
-    text-decoration: none; 
+    text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
 #botao-voltar:hover {
-    transition-duration:1.s; 
+    transform: scale(1.1);
 }
-
 #imagem {
     width: 100px; 
     height: auto;
@@ -162,16 +163,18 @@ h1 {
    border: 4px solid #fbff00; 
     border-radius: 10px; 
     padding: 20px 146px 10px;
-    background-color: #fff;
     height: 200px; 
     background-image:  url('../../PokeBackground.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
 }
 
 .EspacoEstatisticas {
     border: 4px solid #fbff00; 
     border-radius: 10px; 
     padding: 20px 126px 10px;
-    background-color: #137ee2;
+    background-color: #00ff374d;
     height: 340px; 
     color: #000000;
 }
@@ -244,32 +247,114 @@ h1 {
     }
 }
 
-.type-water { background-color: #a4c8e1; } 
-.type-fire { background-color: #e24000; color:white; }
-.type-grass { background-color: #38b634; color:white; }
-.type-bug { background-color: #4c7729; color:white; }
-.type-ground { background-color: #ac7119; color:white; }
-.type-psychic { background-color: #ca2bc2; color:white; }
-.type-poison { background-color: #6f36cc; color:white; }
-.type-electric { background-color: #e2de00; }
+
+.type-normal { background: linear-gradient(135deg,
+    #ffffff,
+    #cecece);
+    color: rgb(0, 0, 0);  }
+
+.type-water { background: linear-gradient(135deg,
+    #0174d1,
+    #00c3ff);
+    color: rgb(0, 0, 0);} 
+
+
+.type-fire { background: linear-gradient(135deg,
+    #dd1515,
+    #ffca1d);
+    color: rgb(0, 0, 0);  }
+
+
+.type-grass {background: linear-gradient(135deg,
+    #417c46,
+    #00ff0d);
+    color: rgb(0, 0, 0); }
+
+
+.type-bug { background: linear-gradient(135deg,
+    #0b4910,
+    #b8d82a);
+    color: rgb(0, 0, 0); }
+
+
+.type-ground { background: linear-gradient(135deg,
+    #d6b316,
+    #352b0f);
+    color: rgb(0, 0, 0); }
+
+
+.type-psychic { background: linear-gradient(135deg,
+    #e07cff,
+    #b700ff);
+    color: rgb(0, 0, 0); }
+
+
+.type-poison { background: linear-gradient(135deg,
+    #6f00ff,
+    #73059e);
+    color: rgb(255, 255, 255); }
+
+
+.type-electric { background: linear-gradient(135deg,
+    #fbff00,
+    #ffbe5d);
+    color: rgb(0, 0, 0);}
+
+
 .type-flying { background-color: #ffad8a; }
-.type-rock { background-color: #8b6453; color: white;}
-.type-fighting { background-color: #daccc6; }
-.type-ghost { background-color: #805f94; color: white;}
-.type-dragon {background:#bb075e; color: white;}
-.type-fairy {background:#ff7dbc; color: white;}
-.type-dark {background:#350135; color: white;}
+
+
+.type-rock { background: linear-gradient(135deg,
+    #9e7b09,
+    #5e5340);
+    color: rgb(0, 0, 0);}
+
+    
+.type-fighting { background: linear-gradient(135deg,
+    #e4dea6,
+    #756a46);
+    color: rgb(0, 0, 0); }
+
+
+.type-ghost { background: linear-gradient(135deg,
+    #9d73e6,
+    #000000);
+    color: rgb(228, 224, 224);}
+
+
+.type-dragon {background: linear-gradient(135deg,
+    #5774d4,
+    #ff247f);
+    color: rgb(0, 0, 0);}
+
+
+.type-fairy {background: linear-gradient(135deg,
+    #fdc8fd,
+    #ff00ea);
+    color: rgb(0, 0, 0);}
+
+
+.type-dark {background: linear-gradient(135deg,
+    #000801,
+    #4b0872);
+    color: rgb(218, 213, 213);}
+
+
 .type-steel {background:#8a8a8a; color: white;}
-.type-ice {background:#2bd2fc; color: white;}
+
+.type-ice {background: linear-gradient(135deg,
+    #94eaff,
+    #05b3c7); 
+    color: rgb(0, 0, 0);}
 .legendary {
     background: linear-gradient(135deg, 
-        #2c3e50, 
-        #4ca1af, 
+        #d1f2ff, 
+        #76ccda, 
         #c3c3f3, 
-        #f58080, 
-        #f8b9b9, 
-        #f5c3c3, 
-        #ffdd94, 
+        #a0e0e9, 
+        #ccb9f8, 
+        #cac2f7, 
+        #bbffff, 
         #ffffff);
     color: #3e225e;
 }
@@ -280,7 +365,7 @@ h1 {
     width: 100px;
     height: 100px;
     border-radius: 10px;
-    border: 2px solid #ffcc00;
+    border: 3px solid #ffbb00;
     background-color: #f9f9f9;
     padding: 5px;
     margin-bottom: 10px;
@@ -311,6 +396,9 @@ h1 {
     text-align: center;
     animation: none; 
     border: 8px solid #3314e0;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; /
 }
 @keyframes girar {
     0% { transform: rotateY(0deg); }

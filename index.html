@@ -85,7 +85,16 @@
     <script src="pokedex/js/ativa.js"></script>
     <script src="pokedex/js/animacao.js"></script>
     
-    <a href="#topo" id="botao-voltar"></a>
+    
+      <a href="#"><img src="seta-para-cima (1).png"alt="icon" title="Voltar ao Topo" id="botao-voltar"></a> 
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script>
+          $("#botao-voltar").click(function (e) {
+              e.preventDefault(); 
+              $("html, body").animate({ scrollTop: 0 }, 2500); 
+          });
+      </script>  
   
 
             
