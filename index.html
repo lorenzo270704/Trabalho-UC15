@@ -15,21 +15,23 @@
                 <img src="Pokemon-Logo-PNG.png" alt="Logo Pokémon" class="logo" >
                 
             </div>
-            <div class="containerAnimacao"></div>
-            <img id="imagem" src="5FBP.gif" alt="Imagem Animada" style="position: absolute;">
-           
-        <div class="header">       
-            <div class="pesquisar-container">
-                <input type="text" id="pesquisarInput" class="pesquisar-input" placeholder="Procure um Pokémon..." aria-label="Procurar Pokémon"> 
-                <button class="pesquisar-button" onclick="PesquisarPokemon()">Buscar</button>
-                <select id="raridade-Select" class="raridades-select" onchange="filtraRaridade()"> 
-                    <option value="">Ver todas as raridades</option>
-                    <option value="comum">Comum</option> 
-                    <option value="raro">Raro</option> 
-                    <option value="lendário">Lendário</option>
-                </select>
+            
+            <div class="containerAnimacao">
+                <img id="imagem" src="5FBP.gif" alt="Imagem Animada">
             </div>
-        </div>
+           
+            <div class="header">       
+                <div class="pesquisar-container">
+                    <input type="text" id="pesquisarInput" class="pesquisar-input" placeholder="Procure um Pokémon..." aria-label="Procurar Pokémon"> 
+                    <button class="pesquisar-button" onclick="PesquisarPokemon()">Buscar</button>
+                    <select id="raridade-Select" class="raridades-select" onchange="filtraRaridade()"> 
+                        <option value="">Ver todas as raridades</option>
+                        <option value="comum">Comum</option> 
+                        <option value="raro">Raro</option> 
+                        <option value="lendário">Lendário</option>
+                    </select>
+                </div>
+            </div>
 
         <div class="abas"> 
             <button class="aba" onclick="geracao(1)">Geração I</button> 
@@ -52,7 +54,8 @@
         <div id="gen7" class="container"></div>
         <div id="gen8" class="container"></div>
         <div id="gen9" class="container"></div>
-    </div>
+        
+        </div>
     
     
     <div id="pokemonModal" class="modal" role="dialog" aria-labelledby="modalNome" aria-hidden="true" > 
@@ -92,7 +95,7 @@
       <script>
           $("#botao-voltar").click(function (e) {
               e.preventDefault(); 
-              $("html, body").animate({ scrollTop: 0 }, 2500); 
+              $("html, body").animate({ scrollTop: 0 }, 1000); 
           });
       </script>  
   
