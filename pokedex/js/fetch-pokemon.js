@@ -5,14 +5,19 @@ async function BuscarPokemon(generation) {
     const inicia = generation === 1 ? 1 : geracaoLimite[generation - 1] + 1;
     const termina = geracaoLimite[generation];
 
- 
     for (let i = inicia; i <= termina; i++) {
-        const chama = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
-        const dados = await chama.json();
-        CriaPokemon(dados, container); 
+        try {
+            const chama = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
+            const dados = await chama.json();
+            CriaPokemon(dados, container); 
+        } catch (error) {
+            console.error(`Erro ao buscar Pokémon com ID ${i}:`, error);
+        }
     }
 
-    container.style.display = 'flex'; 
+    if (container.children.length > 0) {
+        container.style.display = 'flex'; 
+    }
 }
 
 function CriaPokemon(pokemon, container) {
@@ -28,16 +33,15 @@ function CriaPokemon(pokemon, container) {
         pokemonCard.dataset.raridade = 'comum';
     }
 
-    const tipo = pokemon.types[0].type.name; 
+    const tipo = pokemon.types[0]?.type?.name || 'unknown'; 
     pokemonCard.classList.add(`type-${tipo}`);
 
-    // Monta o HTML do card
     const nome = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1); 
     const types = pokemon.types.map(type => type.type.name).join(', '); 
 
     pokemonCard.innerHTML = `
         <h2>${nome}</h2>
-        <img src="${pokemon.sprites.front_default}" alt="${nome}">
+        <img src="${pokemon.sprites?.front_default ?? 'img/default.png'}" alt="${nome}">
         <p class="type">Tipo: ${types}</p>
         <p><strong>Altura:</strong> ${pokemon.height / 10} m</p>
         <p><strong>Peso:</strong> ${pokemon.weight / 10} kg</p>

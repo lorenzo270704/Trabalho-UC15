@@ -8,22 +8,39 @@ function ExibirModal(pokemon) {
     document.getElementById('modalImagem').src = pokemon.sprites.front_default;
     document.getElementById('modalAltura').innerText = (pokemon.height / 10).toFixed(1);
     document.getElementById('modalPeso').innerText = (pokemon.weight / 10).toFixed(1);
-    document.getElementById('modalTipo').innerText = 'Tipo: ' + pokemon.types.map(type => type.type.name).join(', ');
+
+    const tipo = document.getElementById('modalTipo');
+    const tipoTitle = document.createElement('span');
+    tipoTitle.classList.add('stat-title'); 
+    tipoTitle.innerText = 'Tipo: '; 
+
+    const tipoValue = document.createTextNode(pokemon.types.map(type => type.type.name).join(', ')); 
+
+    tipo.innerHTML = ''; 
+    tipo.appendChild(tipoTitle); 
+    tipo.appendChild(tipoValue); 
+
     document.getElementById('modalHabilidade').innerText = pokemon.abilities.map(ability => ability.ability.name).join(', ');
 
     const listar = document.getElementById('modalEstatistica');
-    listar.innerHTML = '';
+    listar.innerHTML = ''; 
     pokemon.stats.forEach(stat => {
         const listItem = document.createElement('li');
-        listItem.innerText = `${stat.stat.name}: ${stat.base_stat}`; 
+        
+        const statName = document.createElement('span');
+        statName.classList.add('stat-title'); 
+        statName.innerText = `${stat.stat.name}: `; 
+        
+        const statValue = document.createTextNode(stat.base_stat); 
+
+        listItem.appendChild(statName);
+        listItem.appendChild(statValue);
         listar.appendChild(listItem);
     });
 
-   
     const modalContent = document.querySelector('.modal-content');
     modalContent.classList.add('girar');
     
-   
     setTimeout(() => {
         modalContent.classList.remove('girar');
     }, 500); 
