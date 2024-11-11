@@ -1,5 +1,4 @@
-let indicePokemon = 0;
-
+// Exibe o modal com as informações detalhadas de um Pokémon.
 function ExibirModal(pokemon) {
     indicePokemon = pokemon.id;
 
@@ -49,6 +48,7 @@ function ExibirModal(pokemon) {
     botaoNav(pokemon.id); 
 }
 
+// Função para navegar entre os Pokémons para frente ou para trás.
 function navegar(direction) {
     const proxId = indicePokemon + direction; 
     fetch(`https://pokeapi.co/api/v2/pokemon/${proxId}`)
@@ -63,11 +63,13 @@ function navegar(direction) {
         .catch(error => console.error(error)); 
 }
 
+// Função para exibir ou ocultar os botões de navegação com base no ID do Pokémon atual.
 function botaoNav(currentId) {
     document.getElementById('anteButton').style.display = currentId > 1 ? 'inline-block' : 'none'; 
     document.getElementById('proxiButton').style.display = currentId < 1010 ? 'inline-block' : 'none'; 
 }
 
+// Função para fechar o modal.
 function fechaModal() {
     const modal = document.getElementById('pokemonModal');
     modal.style.display = 'none'; 

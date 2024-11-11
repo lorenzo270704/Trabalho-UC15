@@ -1,3 +1,4 @@
+// Seleciona todas as abas com a classe '.aba'.
 const abas = document.querySelectorAll('.aba');
 
 abas.forEach(aba => {

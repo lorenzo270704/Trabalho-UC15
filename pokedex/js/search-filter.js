@@ -1,3 +1,4 @@
+// Função para pesquisar Pokémons com base no nome digitado pelo usuário.
 async function PesquisarPokemon() {
     const input = document.getElementById('pesquisarInput').value.toLowerCase(); 
     const containers = document.querySelectorAll('.container');
@@ -21,6 +22,7 @@ async function PesquisarPokemon() {
     }
 }
 
+// Função para filtrar Pokémons pela raridade selecionada pelo usuário.
 function filtraRaridade() {
     const raridade = document.getElementById('raridade-Select').value; 
     const containers = document.querySelectorAll('.container .pokemon');

@@ -1,3 +1,4 @@
+// Função assíncrona para buscar e exibir Pokémons de uma geração específica.
 async function BuscarPokemon(generation) {
     const container = document.getElementById(`gen${generation}`);
     container.innerHTML = ''; 
@@ -20,6 +21,7 @@ async function BuscarPokemon(generation) {
     }
 }
 
+// Função para criar o card de um Pokémon e exibi-lo no container.
 function CriaPokemon(pokemon, container) {
     const pokemonCard = document.createElement('div');
     pokemonCard.classList.add('pokemon'); 
