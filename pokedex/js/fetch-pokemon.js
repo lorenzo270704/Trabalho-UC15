@@ -6,22 +6,38 @@ async function BuscarPokemon(generation) {
     const inicia = generation === 1 ? 1 : geracaoLimite[generation - 1] + 1;
     const termina = geracaoLimite[generation];
 
+    const promessas = [];
+
+    const pokemons = new Array(termina - inicia + 1);
+
     for (let i = inicia; i <= termina; i++) {
-        try {
-            const chama = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
-            const dados = await chama.json();
-            CriaPokemon(dados, container); 
-        } catch (error) {
-            console.error(`Erro ao buscar Pokémon com ID ${i}:`, error);
-        }
+        const index = i - inicia;  
+
+        const promise = fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+            .then(response => response.json())
+            .then(dados => {
+                pokemons[index] = dados;  
+            })
+            .catch(error => console.error(`Erro ao buscar Pokémon com ID ${i}:`, error));
+        
+        promessas.push(promise);
     }
 
+    
+    await Promise.all(promessas);
+
+    
+    pokemons.forEach(pokemon => {
+        CriaPokemon(pokemon, container); 
+    });
+
+    
     if (container.children.length > 0) {
         container.style.display = 'flex'; 
     }
 }
 
-// Função para criar o card de um Pokémon e exibi-lo no container.
+
 function CriaPokemon(pokemon, container) {
     const pokemonCard = document.createElement('div');
     pokemonCard.classList.add('pokemon'); 
